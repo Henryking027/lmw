@@ -110,8 +110,8 @@ cart();
 
 <!-- third Child -->
 <div class="bg-light">
-    <h3 class="text-center"> Luxury Millenium Wears </h3>
-    <p class="text-center"> All your Luxury Wears in one stop</p>
+    <h2 class="text-center text-success"> Luxury Millenium Wears </h2>
+    <p class="text-center "> All your Luxury Wears in one stop</p>
 </div>
 
 
@@ -184,7 +184,7 @@ if(isset($_POST['update_cart'])){
                         <input type="submit" value="Update Cart" class="bg-info px-3 py-2 border-0 mx-3" name="update_cart">
                         <!-- <button class="bg-info px-3 py-2 border-0 mx-3">Remove</button> -->
 
-                        <input type="submit" value="Remove Cart" class="bg-info px-3 py-2 border-0 mx-3" name="remove_cart">
+                        <input type="submit" value="Remove Cart" class="bg-danger px-3 text-light py-2 border-0 mx-3" name="remove_cart">
 
                     </td>
                 </tr>
@@ -208,11 +208,11 @@ if(isset($_POST['update_cart'])){
         $result_count=mysqli_num_rows($result);
         if($result_count>0){
 
-            echo "<h4 class='px-3'>Subtotal:  <strong class='text-info'> $ $total</strong></h4>
-            <input type='submit' value='Continue Shopping' class='bg-info px-3 py-2 border-0 mx-3' name='continue_shopping'>
+            echo "<h4 class='px-3'>Subtotal:  <strong class='text-dark'> $ $total</strong></h4>
+            <input type='submit' value='Continue Shopping' class='bg-success px-3 py-2 border-0 mx-3' name='continue_shopping'>
             <button class='bg-secondary px-3 py-2 border-0 mx-3'><a href='./users_area/checkout.php' class='text-light text-decoration-none'>Checkout</a></button>";
         }else{
-            echo "<input type='submit' value='Continue shopping' class='bg-info px-3 py-2 border-0 mx-3' name='continue_shopping'>";
+            echo "<input type='submit' value='Continue shopping' class='bg-success px-3 py-2 border-0 mx-3' name='continue_shopping'>";
         }
         if(isset($_POST['contiue_shopping'])){
             echo "<script>window.open('index.php','_self')</script>";

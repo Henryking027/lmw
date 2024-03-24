@@ -43,7 +43,7 @@ $user_id=$row_fetch['user_id'];
         while($row_orders=mysqli_fetch_assoc($result_orders)){
             $order_id=$row_orders['order_id'];
             $amount_due=$row_orders['amount_due'];
-            $total_products=$rowrow_orders_data['total_products'];
+            $total_products=$row_orders['total_products'];
             $invoice_number=$row_orders['invoice_number'];
             $order_status=$row_orders['order_status'];
             if($order_status=='pending'){
@@ -66,7 +66,7 @@ $user_id=$row_fetch['user_id'];
                         if($order_status=='complete'){
                             echo "<td>Paid</td>";
                         }else{
-                            echo  "<td><a href='confirm_payment.php?order_id=$order_id' class='text-light'>Confirm</a></td>
+                            echo  "<td><a href='confirm_payment.php?order_id=$order_id' class='text-success'>Confirm</a></td>
                             </tr>";
                         }
                        

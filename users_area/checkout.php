@@ -34,10 +34,6 @@ session_start();
 <!-- navbar -->
 
     <!-- first child -->
-<div class="bg-light">
-    <h3 class="text-center"> Luxury Millenium Wears </h3>
-    <p class="text-center"> All your Luxury Wears in one stop</p>
-</div>
 
 
  
@@ -74,6 +70,11 @@ session_start();
         
     </ul>
 </nav>
+<div class="bg-light">
+    <h3 class="text-center"> Luxury Millenium Wears </h3>
+    <p class="text-center"> All your Luxury Wears in one stop</p>
+</div>
+
 
 
 

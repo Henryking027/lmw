@@ -208,7 +208,7 @@ if(!isset($_SESSION['username'])){
     <div class="col-md-2 bg-secondary p-0"> 
         <!-- Brands to be displayed -->
         <ul class="navbar-nav me-auto text-center ">
-            <li class="nav-item bg-info">
+            <li class="nav-item bg-warning">
                 <a class="nav-link text-light" href="#"><h4> Delivery Brands </h4></a>
             </li>
             <?php
@@ -221,7 +221,7 @@ if(!isset($_SESSION['username'])){
 
         <!-- Categories to be displayed -->
         <ul class="navbar-nav me-auto text-center ">
-            <li class="nav-item bg-info">
+            <li class="nav-item bg-warning">
                 <a class="nav-link text-light" href="#"><h4> Categories </h4></a>
             </li>
 

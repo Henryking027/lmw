@@ -18,6 +18,7 @@ include('../functions/common_function.php');
     <style>
         .paymentimg{
             width: 100%;
+            margin-left: 15px;
 
         }
     </style>
@@ -30,7 +31,7 @@ include('../functions/common_function.php');
 $user_ip=getIPAddress();
 $get_user="select * from `user_table` where user_ip='$user_ip'";
 $result=mysqli_query($con,$get_user);
-$run_query=mysqli_fetch_array($result);
+$run_query=mysqli_fetch_assoc($result);
 $user_id=$run_query['user_id'];
 
 
@@ -39,12 +40,12 @@ $user_id=$run_query['user_id'];
         <h2 class="text-center text-info"> Payment Options </h2>
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col-md-6">
-            <a href="https://www.paypal.com" target="_blank"><img src="../images/icons/download playstore.PNG" 
+            <a href="https://www.paypal.com" target="_blank"><img src="../images/icons/paypal.jpg" 
             class=paymentimg alt=""></a>
             </div>
 
             <div class="col-md-6">
-            <a href="order.php/user_id=<?php  echo $user_id ?>"><h2 class="text-center my-5" >Pay Offline</h2></a>
+            <a href="order.php?user_id=<?php echo $user_id ?>"><h2 class="text-center my-5" >Pay Offline</h2></a>
             </div>
         </div>
     </div>

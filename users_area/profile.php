@@ -125,7 +125,7 @@ if(!isset($_SESSION['username'])){
         </li>";
         }else{
           echo "<li class='nav-item'>
-          <a class='nav-link' href='users_area/logout.php'>Logout</a>
+          <a class='nav-link' href='./logout.php'>Logout</a>
         </li>";
         }
 
@@ -178,7 +178,7 @@ echo " <li class='nav-item '>
           <a class="nav-link text-light" href="profile.php?delete_account"> Delete Account</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link text-light" href="logout.php"> Logout</a>
+          <a class="nav-link text-light" href="./logout.php"> Logout</a>
         </li>
         </ul>
     </div>

@@ -44,9 +44,20 @@ session_start();
         <li class="nav-item">
           <a class="nav-link" href="display_all.php">Products</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="users_area/user_registration.php">Register</a>
-        </li>
+        <?php
+        
+        if(isset($_SESSION['username'])){
+
+          echo " <li class='nav-item'>
+          <a class='nav-link' href='users_area/profile.php'>My Account</a>
+        </li>";
+        }else{
+          echo " <li class='nav-item'>
+          <a class='nav-link' href='users_area/user_registration.php'>Register</a>
+        </li>";
+        }
+        
+        ?>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
@@ -178,7 +189,7 @@ cart();
     <div class="col-md-2 bg-secondary p-0"> 
         <!-- Brands to be displayed -->
         <ul class="navbar-nav me-auto text-center ">
-            <li class="nav-item bg-info">
+            <li class="nav-item bg-warning">
                 <a class="nav-link text-light" href="#"><h4> Delivery Brands </h4></a>
             </li>
             <?php
@@ -191,7 +202,7 @@ cart();
 
         <!-- Categories to be displayed -->
     <ul class="navbar-nav me-auto text-center ">
-            <li class="nav-item bg-info">
+            <li class="nav-item bg-warning">
                 <a class="nav-link text-light" href="#"><h4> Categories </h4></a>
             </li>
 

@@ -11,7 +11,7 @@ function getproducts(){
 //condition to check isset or not
 if(!isset($_GET['category'])){
     if(!isset($_GET['brand'])){
-    $select_query="select * from `products` order by rand() LIMIT 0,2";
+    $select_query="select * from `products` order by rand() LIMIT 0,9";
          $result_query=mysqli_query($con,$select_query);
          //$row=mysqli_fetch_assoc($result_query);
          //echo $row['product_title'];
@@ -409,7 +409,7 @@ function view_details(){
     function get_user_order_details(){
         global $con;
         $username=$_SESSION['username'];
-        $get_details="select * from `user_table` where username ='$username'";
+        $get_details="select * from `user_table` where username='$username'";
         $result_query=mysqli_query($con,$get_details);
         while($row_query=mysqli_fetch_array($result_query)){
             $user_id=$row_query['user_id'];
@@ -420,7 +420,7 @@ function view_details(){
                         $result_orders_query=mysqli_query($con,$get_orders);
                         $row_count=mysqli_num_rows($result_orders_query);
                         if($row_count>0){
-                            echo "<h3 class='text-center text-success mt-5 mb-2'> You have <span class='text-danger'>$row_count</span> pending orders</h3>
+                            echo "<h3 class='text-center text-success mt-5 mb-2'> You have <span class='text-danger'>$row_count</span> pending orders </h3>
                             <p class='text-center'> <a href='profile.php?my_orders' class='text-dark'>Order Details</a></p>";
 
                         }else{
